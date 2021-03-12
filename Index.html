@@ -1,0 +1,305 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/easyResponsiveTabs.js"></script>
+    <link rel="shortcut icon" href="images/pirate.ico">
+	<title>Andir Jaya Motor</title>
+    <style type="text/css" rel="stylesheet">
+        body {
+            background: #fff;
+        }
+        #container {
+            width: 935px;
+            margin: 0 auto;
+        }
+        @media only screen and (max-width: 768px) {
+            #container {
+                width: 90%;
+                margin: 0 auto;
+				margin-bottom: 120px;
+                margin-top: 80px;
+            }
+        }
+   @font-face {
+         font-family: "Digital";
+         src: url('fonts/Gimme Danger.TTF');
+         }
+   @font-face {
+         font-family: "Font Digitul";
+         src: url('fonts/Urban.TTF');
+		 src: url('fonts/Urban.eot');
+		 src: url('fonts/Urban.eot?#iefix') format('embedded-opentype'),	 
+		 url('fonts/Urban.woff') format('woff'),
+		 url('fonts/Urban.ttf') format('truetype'),
+		 url('fonts/Urban.svg') format('svg');
+         }
+ 
+   .kotak {
+         font-family: "Digital";
+		 font-size: 40px;
+         }
+         
+   .galery img {
+     width: 290px;
+     height: 200px;
+     border: 2px solid #575D63;
+     padding: 2px;
+   }
+    </style>
+</head>
+<body>
+<style>.kotak{text-align:center;background:black;position:absolute;padding:13px;border-bottom:2px solid white;padding-bottom:2px;top:-10px;left:0px;right:0px;}</style><br/><br/>
+<div class="kotak"><SCRIPT>
+farbbibliothek = new Array();
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100");
+farbbibliothek[1] = new Array("#FF0000","#FFFFFF","#FFFFFF","#FF0000");
+farbbibliothek[2] = new Array("#FFFFFF","#FF0000","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF");
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040");
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000");
+farbbibliothek[5] = new Array("#FF0000","#FF0000","#FF0000","#FFFFFF","#FFFFFF","#FFFFFF");
+farbbibliothek[6] = new Array("#FF0000","#FDF5E6");
+farben = farbbibliothek[4];
+function farbschrift()
+{
+for(var i=0 ; i<Buchstabe.length; i++)
+{
+document.all["a"+i].style.color=farben[i];
+}
+farbverlauf();
+}
+function string2array(text)
+{
+Buchstabe = new Array();
+while(farben.length<text.length)
+{
+farben = farben.concat(farben);
+}
+k=0;
+while(k<=text.length)
+{
+Buchstabe[k] = text.charAt(k);
+k++;
+}
+}
+function divserzeugen()
+{
+for(var i=0 ; i<Buchstabe.length; i++)
+{
+document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span>");
+}
+farbschrift();
+}
+var a=1;
+function farbverlauf()
+{
+for(var i=0 ; i<farben.length; i++)
+{
+farben[i-1]=farben[i];
+}
+farben[farben.length-1]=farben[-1];
+setTimeout("farbschrift()",30);
+}
+//
+var farbsatz=1;
+function farbtauscher()
+{
+farben = farbbibliothek[farbsatz];
+while(farben.length<text.length)
+{
+farben = farben.concat(farben);
+}
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001));
+}
+setInterval("farbtauscher()",10000);
+text ="ANDIR JAYA MOTOR";//h
+string2array(text);
+divserzeugen();
+//document.write(text);
+</SCRIPT></div>
+    <div id="container"><br/><br/><br/>
+        <!--Horizontal Tab-->
+        <div id="parentHorizontalTab">
+            <ul class="resp-tabs-list hor_1">
+                <li>&#9760; HOME &#9760;</li>
+                <li><i class="fa fa-question-circle pull-left"></i>PROFIL</li>
+                <li><i class="fa fa-sticky-note pull-left"></i>PRODUCT</li>
+                <li><i class="fa fa-gear pull-left"></i>SERVICE</li>
+                <li><i class="fa fa-file-image-o pull-left"></i>GALERY</li>
+                <li><i class="fa fa-male pull-left"></i>CONTACT</li>
+            </ul>
+            <div class="resp-tabs-container hor_1">
+
+			    <div><!--HOME-->
+	                <img class="img-responsive" src="images/AJM.ico" align="left">
+	                <br>
+                    <font size="6"></font> <font size="6" face="Open Sans"><b>ANDIR JAYA MOTOR</b></font> <font size="6"></font>
+                    <br>
+                    Selamat Datang di Bengkel Kami... Kami menyediakan berbagai macam Spareparts dan juga melayani Service kendaraan.
+                    <center><h1>VISI</h1></center>
+                    Menjadi bengkel terkenal dengan memiliki layanan servis yang dapat diandalkan dan menjual spareparts berkualitas.
+                    <br>
+                    <center><h1>MISI</h1></center>
+                    Memenuhi kebutuhan pelanggan dengan memberikan pelayanan jasa perbaikan kendaraan yang cepat dan memuaskan serta menciptakan lingkungan kerja yang nyaman bagi pelanggan dan karyawan.
+                </div>
+                                
+                <div><!--PROFILE-->
+                    &ensp;&ensp;&ensp;&ensp;&ensp;
+                    Bengkel Andir Jaya Motor berada di kawasan Kabupaten Bandung yang beralamat di Jl. Raya Lambur awi-majalaya No 121, Kp. Andir, Kel. Desa tanjung wangi, Kec. Pacet, Kab. Bandung.
+                    <p><br>&ensp;&ensp;&ensp;&ensp;&ensp;
+                    Nama Andir Jaya Motor ini berasal dari nama daerah tempat bengkel tempat tersebut berada.
+                    Pada mulanya bengkel Andir Jaya Motor dipegang langsung oleh pemilik nama bengkel yaitu Bapak Jajang, namun dengan kesibukan kerja Bapak Jajang di perusahaan Swasta membuat bengkel Andir Jaya Motor sedikit terganggu. 
+                    <p><br>&ensp;&ensp;&ensp;&ensp;&ensp;
+                    Sehingga perusahaan perbengkelan dipegang oleh anaknya sendiri dengan dibantu temannya dan kemudian bengkel dikembangkan mulai dari jumlah produk dagang yang diperbesar dan jasa service yang lebih kepada kenyamanan dan keamanan bagi kendaraan yang di service.
+                </div>
+
+                <div><!--PRODUCT-->
+                    <i class="material-icons">filter_1</i>
+                    BAN DALAM IRC BERMACAM UKURAN
+                    <br> 
+                    <br>
+                    <i class="material-icons">filter_2</i>
+                    BAN LUAR IRC BERMACAM UKURAN 
+                    <br>
+                    <br>
+                    <i class="material-icons">filter_4</i>
+                    BUSI 
+                    <br>
+                    <br>
+                    <i class="material-icons">filter_5</i>
+                    KABEL REM 
+                    <br>
+                    <br>
+                    <i class="material-icons">filter_6</i>
+                    KIT PASTE ODOL 
+                    <br>
+                    <br>
+                    <i class="material-icons">filter_7</i>
+                    KLAKSON 12V (MR,HT) 
+                    <br>
+                    <br>
+                    <i class="material-icons">filter_8</i>
+                    OLI CASTROL
+                    <br>
+                    <br>
+                    <i class="material-icons">filter_9</i>
+                    Dan Lain - Lain.
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+
+                <div><!--SERVICE-->
+                    <i class="material-icons">filter_1</i>
+                    Jasa Service.
+                    <br>
+                    <br>
+                    <i class="material-icons">filter_2</i>
+                    Sparepart Lokal / Orisinil.
+                    <br>
+                    <br>
+                    <i class="material-icons">filter_3</i>
+                    Korek Mesin.
+                    <br>
+                    <br>
+                    <i class="material-icons">filter_4</i>
+                    Service Injeksi.
+                    <br>
+                    <br>
+                    <i class="material-icons">filter_5</i>
+                    Dan Lain - Lain.
+                </div>
+
+                <div class='galery' align="center" ><!--GALERY-->
+                    <img src="images/1.jpeg"><img src="images/2.jpeg"><img src="images/3.jpeg">
+                    <img src="images/4.jpeg"><img src="images/5.jpg"><img src="images/6.jpeg">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                
+                <div><!--CONTACT-->
+                    <i class="fa fa-facebook-official"></i>
+                    <a target="_blank" href="https://www.facebook.com/ikmalsugandi.ikmalsugandi.5">Facebook</a>
+                    <br>
+                    <i class="fa fa-instagram"></i>
+                    <a target="_blank" href="https://www.instagram.com/andirjayamotor">Instagram</a>
+                    <br>
+                    <i class="fa fa-whatsapp"></i>
+                    <a target="_blank">WA +62 813-6335-5313</a>
+                    <br>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br/>
+    
+    <!--/#footer-->
+    <footer id="footer">
+                    <font size='4' face='Andalus'>Copyright &copy; 2020. &#9760; <a target="_blank" href="https://www.instagram.com/andirjayamotor">Andir Jaya Motor</a> &#9760;</font>
+    </footer>
+	
+	<!--Plug-in Initialisation-->
+	<script type="text/javascript">
+    $(document).ready(function() {
+        //Horizontal Tab
+        $('#parentHorizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+
+        // Child Tab
+        $('#ChildVerticalTab_1').easyResponsiveTabs({
+            type: 'vertical',
+            width: 'auto',
+            fit: true,
+            tabidentify: 'ver_1', // The tab groups identifier
+            activetab_bg: '#fff', // background color for active tabs in this group
+            inactive_bg: '#F5F5F5', // background color for inactive tabs in this group
+            active_border_color: '#c1c1c1', // border color for active tabs heads in this group
+            active_content_border_color: '#5AB1D0' // border color for active tabs contect in this group so that it matches the tab head border
+        });
+        $('#ChildVerticalTab_2').easyResponsiveTabs({
+            type: 'vertical',
+            width: 'auto',
+            fit: true,
+            tabidentify: 'ver_2', // The tab groups identifier
+            activetab_bg: '#fff', // background color for active tabs in this group
+            inactive_bg: '#F5F5F5', // background color for inactive tabs in this group
+            active_border_color: '#c1c1c1', // border color for active tabs heads in this group
+            active_content_border_color: '#5AB1D0' // border color for active tabs contect in this group so that it matches the tab head border
+        });
+
+        //Vertical Tab
+        $('#parentVerticalTab').easyResponsiveTabs({
+            type: 'vertical', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            closed: 'accordion', // Start closed if in accordion view
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo2');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+    });
+</script>
+</body>
+</html>
